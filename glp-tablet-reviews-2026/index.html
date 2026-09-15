@@ -542,7 +542,7 @@ fbq('track', 'ViewContent', {content_name:"Best GLP-1 Oral Tablets for 2026",con
 (function(){
   function fire(name,data){try{if(window.fbq)window.fbq('trackCustom',name,data);}catch(e){}}
 
-  // TimeOnPage: cumulative visible seconds, one event per threshold. Each
+  // TimeOnPage<n>: cumulative visible seconds, one event per threshold. Each
   // increment is clamped to ~2 ticks: a lid closed without a visibilitychange,
   // or a clock jump, must not credit hours as visible time.
   var thresholds=[15,30,60],visibleMs=0,since=null,fired={};
@@ -551,7 +551,7 @@ fbq('track', 'ViewContent', {content_name:"Best GLP-1 Oral Tablets for 2026",con
     var s=Math.floor(visibleMs/1000);
     for(var i=0;i<thresholds.length;i++){
       var t=thresholds[i];
-      if(s>=t&&!fired[t]){fired[t]=true;fire('TimeOnPage',{seconds:t});}
+      if(s>=t&&!fired[t]){fired[t]=true;fire('TimeOnPage'+t,{seconds:t});}
     }
   }
   function onVis(){
@@ -562,7 +562,7 @@ fbq('track', 'ViewContent', {content_name:"Best GLP-1 Oral Tablets for 2026",con
   document.addEventListener('visibilitychange',onVis);
   setInterval(tick,1000);
 
-  // ScrollDepth: percent of the scrollable distance, one event per threshold.
+  // ScrollDepth<n>: percent of the scrollable distance, one event per threshold.
   var scrollMarks=[50,90],scrolled={};
   function onScroll(){
     var d=document.documentElement,total=d.scrollHeight-window.innerHeight;
@@ -570,7 +570,7 @@ fbq('track', 'ViewContent', {content_name:"Best GLP-1 Oral Tablets for 2026",con
     var pct=Math.round(((window.scrollY||d.scrollTop)/total)*100);
     for(var i=0;i<scrollMarks.length;i++){
       var m=scrollMarks[i];
-      if(pct>=m&&!scrolled[m]){scrolled[m]=true;fire('ScrollDepth',{percent:m});}
+      if(pct>=m&&!scrolled[m]){scrolled[m]=true;fire('ScrollDepth'+m,{percent:m});}
     }
   }
   window.addEventListener('scroll',onScroll,{passive:true});
