@@ -529,6 +529,66 @@
     }
   })();
 </script>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1083398400797338');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name:"Best GLP-1 Oral Tablets for 2026",content_category:"Best GLP-1 oral tablet weight loss medications - the same benefits as injection-based GLP-1 treatments now available in pill form via online telehealth"});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1083398400797338&ev=PageView&noscript=1"/></noscript>
+<!-- Meta Pixel engagement events -->
+<script>
+(function(){
+  function fire(name,data){try{if(window.fbq)window.fbq('trackCustom',name,data);}catch(e){}}
+
+  // TimeOnPage: cumulative visible seconds, one event per threshold. Each
+  // increment is clamped to ~2 ticks: a lid closed without a visibilitychange,
+  // or a clock jump, must not credit hours as visible time.
+  var thresholds=[15,30,60],visibleMs=0,since=null,fired={};
+  function tick(){
+    if(since!==null){var now=Date.now(),d=now-since;since=now;visibleMs+=Math.max(0,Math.min(d,2000));}
+    var s=Math.floor(visibleMs/1000);
+    for(var i=0;i<thresholds.length;i++){
+      var t=thresholds[i];
+      if(s>=t&&!fired[t]){fired[t]=true;fire('TimeOnPage',{seconds:t});}
+    }
+  }
+  function onVis(){
+    if(document.visibilityState==='visible'){if(since===null)since=Date.now();}
+    else{tick();since=null;}
+  }
+  onVis();
+  document.addEventListener('visibilitychange',onVis);
+  setInterval(tick,1000);
+
+  // ScrollDepth: percent of the scrollable distance, one event per threshold.
+  var scrollMarks=[50,90],scrolled={};
+  function onScroll(){
+    var d=document.documentElement,total=d.scrollHeight-window.innerHeight;
+    if(total<=0)return;
+    var pct=Math.round(((window.scrollY||d.scrollTop)/total)*100);
+    for(var i=0;i<scrollMarks.length;i++){
+      var m=scrollMarks[i];
+      if(pct>=m&&!scrolled[m]){scrolled[m]=true;fire('ScrollDepth',{percent:m});}
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+
+  // OfferClick: any click that lands on a tracked offer link. Never prevents
+  // the navigation. The sale itself is reported server-side, not from here.
+  // A middle-click opens the offer in a new tab but dispatches auxclick, not
+  // click; a right-click (button 2) opens a menu and is not a navigation.
+  function onOfferClick(ev){
+    if(ev.type==='auxclick'&&ev.button!==1)return;
+    var a=ev.target&&ev.target.closest?ev.target.closest('[data-lt-offer]'):null;
+    if(!a)return;
+    fire('OfferClick',{offer_id:a.getAttribute('data-lt-offer')||'',position:a.getAttribute('data-lt-pos')||''});
+  }
+  document.addEventListener('click',onOfferClick,{passive:true,capture:true});
+  document.addEventListener('auxclick',onOfferClick,{passive:true,capture:true});
+})();
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -543,7 +603,7 @@
       <h1 style="text-align:center;">Best GLP-1 Oral Tablets for 2026</h1>
       <p>Want to try a GLP-1 but hate needles? Good news, the FDA approved semaglutide (GLP-1) in tablet form on Dec 23, 2025. You can now experience the same weight loss benefits without having to jab yourself weekly.</p>
 <p>There are very few telehealth provider who can prescribe GLP-1 tablets at this time.  We review the best options for you, below...</p>
-      <div class="pill"><span class="dot" aria-hidden="true"></span> Last Updated: July 19, 2026</div>
+      <div class="pill"><span class="dot" aria-hidden="true"></span> Last Updated: September 15, 2026</div>
     </div>
   </div>
 </section>
@@ -557,7 +617,7 @@
       <a href="#offer-c242a75b-34fb-4379-9fcf-8eea4abe6908"><span class="toc-rank">4.</span>SkinnyRx</a>
       <a href="#offer-c66b50dd-4a67-42ee-947f-a0ea60ead7cc"><span class="toc-rank">5.</span>Willow</a>
     </nav>
-    <div class="ribbon-row"><span class="ribbon">Editor's Choice &mdash; July 2026</span></div>
+    <div class="ribbon-row"><span class="ribbon">Editor's Choice &mdash; September 2026</span></div>
     <div class="list" data-lt-offers>
 
 <!-- Offer 1: MedVi Quiz Lander -->
